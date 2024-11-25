@@ -17,7 +17,7 @@ APP_ID = int(os.environ.get("APP_ID", ""))
 API_HASH = os.environ.get("API_HASH", "")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002343554661"))
 
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", ""))
@@ -56,14 +56,14 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" e
 
 # Auto delete time in seconds.
 AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", "0"))
-AUTO_DELETE_MSG = os.environ.get("AUTO_DELETE_MSG", "This file will be automatically deleted in {time} seconds. Please ensure you have saved any necessary content before this time.")
-AUTO_DEL_SUCCESS_MSG = os.environ.get("AUTO_DEL_SUCCESS_MSG", "Your file has been successfully deleted. Thank you for using our service. ✅")
+AUTO_DELETE_MSG = os.environ.get("AUTO_DELETE_MSG", "<blockquote><b>THE FILES WILL BE DELETED IN 15 MINUTES ⏳</b></blockquote>\n<blockquote><b>⚠️ FORWARD THE MOVIES / SERIES TO YOUR SAVED MESSAGES IMMEDIATELY.</b></blockquote>")
+AUTO_DEL_SUCCESS_MSG = os.environ.get("AUTO_DEL_SUCCESS_MSG", "<blockquote><b>FILES SUCCESSFULLY DELETED FROM BOT ☑</b></blockquote>")
 
 #Set true if you want Disable your Channel Posts Share button
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
+USER_REPLY_TEXT = "<b>YOU CAN'T SEND/FORWARD MESSAGES DIRECTLY IN HERE 🚫\n\nKindly Please Join This Channel To Use This Bot @Movie_Emporio.\n\nIf You Have Any Doubts & Queries Ask In @MEChatGroup 📮</b>"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1250450587)

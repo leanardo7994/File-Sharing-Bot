@@ -31,7 +31,7 @@ DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
-JOIN_REQUEST_ENABLE = os.environ.get("JOIN_REQUEST_ENABLED", True)
+JOIN_REQUEST_ENABLE = os.environ.get("JOIN_REQUEST_ENABLED", None)
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -46,7 +46,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>Hello {mention} 👋</b>\n<blockquote><b>I Can Store</b> 𝐌𝐎𝐕𝐈𝐄𝐒 𝐄𝐌𝐏𝐎𝐑𝐈𝐎 <b>Files In This Bot And Other Users Can Access It From Special Link 🔗</b></blockquote>\n<blockquote><b><a href='https://t.me/movie_emporio'>BEFORE THAT YOU NEED TO JOIN IN OUR CHANNEL TO DOWNLOAD THE MOVIE FILES 📂</a></b></blockquote>\n<b>AFTER JOIN THE CHANNEL CLICK THE</b>🔄 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡 🔄 <b>BUTTON TO GET THE FILES</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>Hello {mention} 👋</b>\n<blockquote><b>I Can Store</b> 𝐌𝐎𝐕𝐈𝐄𝐒 𝐄𝐌𝐏𝐎𝐑𝐈𝐎 <b>Files In This Bot And Other Users Can Access It From Special Link 🔗</b></blockquote>\n<blockquote><b><a href='https://t.me/movie_emporio'>BEFORE THAT YOU NEED TO JOIN IN OUR CHANNEL TO DOWNLOAD THE MOVIE FILES 📂</a></b></blockquote>\n<b>AFTER JOIN THE CHANNEL CLICK THE</b> 🔄 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡 🔄 <b>BUTTON TO GET THE FILES</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)

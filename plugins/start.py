@@ -163,17 +163,9 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 
 
 @Bot.on_message(filters.command('start') & filters.private)
+@Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-
-    if bool(JOIN_REQUEST_ENABLE):
-        invite = await client.create_chat_invite_link(
-            chat_id=FORCE_SUB_CHANNEL,
-            creates_join_request=True
-        )
-        ButtonUrl = invite.invite_link
-    else:
-        ButtonUrl = client.invitelink
-
+    mention = str(message.from_user.mention)
     text = f"<b>Hello {mention} 👋</b>\n\n<b>I Can Store</b> 𝐌𝐎𝐕𝐈𝐄𝐒 𝐄𝐌𝐏𝐎𝐑𝐈𝐎 <b>Files In This Bot And Other Users Can Access It From Special Link 🔗</b>\n\n<blockquote><b><a href='https://t.me/movie_emporio'>YOU NEED TO JOIN IN OUR CHANNEL TO DOWNLOAD THE MOVIE FILES 📂</a></b></blockquote>"
 
     message_text = message.text
